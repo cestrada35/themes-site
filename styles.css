@@ -1,0 +1,49 @@
+html {
+    color: rgb(255, 255, 255);
+    font-family: monospace;
+    font-size: 100%;
+}
+
+.foreground {
+    background:rgba(0, 68, 255, 0.85);
+    position:absolute;
+    top:4%;
+    right:2%;
+    bottom: 4%;
+    left:2%;
+    border-radius: 1rem  4rem;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 8%;
+    font-size: 4rem;
+    font-weight: lighter;
+}
+
+.wrapper {
+    display: flex;
+}
+
+.cards{
+    flex:1 1;
+    color: rgb(0, 0, 0);
+    background:rgb(255, 255, 255);
+    border: 0.5rem solid rgb(0, 0, 0);
+    padding: 1.5rem;
+    margin: 2rem;
+    border-radius: 1rem;
+    font-size: 2rem;
+}
+
+.cards > div > button{
+    font-size: 1.5rem;
+    
+}
+#buttons-card{
+    color: rgb(0, 0, 0);
+    text-align: center;
+}
+#standard {
+    margin-top: 5rem;
+}
