@@ -16,7 +16,7 @@ html {
 
 h1 {
     text-align: center;
-    margin-top: 8%;
+    margin-top: 3%;
     font-size: 4rem;
     font-weight: lighter;
 }
@@ -25,22 +25,22 @@ h1 {
     display: flex;
 }
 
-.cards{
+.cards {
     flex:1 1;
     color: rgb(0, 0, 0);
     background:rgb(255, 255, 255);
     border: 0.5rem solid rgb(0, 0, 0);
     padding: 1.5rem;
-    margin: 2rem;
+    margin: 3rem;
     border-radius: 1rem;
     font-size: 2rem;
 }
 
-.cards > div > button{
+.cards > div > button {
     font-size: 1.5rem;
     
 }
-#buttons-card{
+#buttons-card {
     color: rgb(0, 0, 0);
     text-align: center;
 }
