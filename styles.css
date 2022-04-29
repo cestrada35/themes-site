@@ -65,18 +65,33 @@ p, ul {
 
 button {
     padding: 0.75rem;
+    border-radius: 1rem;
 }
 
-
+#terminal{
+    background-color: #000000;
+    color: #00ff04;
+    border: 0.2rem solid #00ff04;
+}
+#sunset{
+    background-color: #fbff00;
+    color: #000000;
+    border: 0.2rem solid #DE3163;
+}
+#cyber{
+    background-color: #000000;
+    color: #00e5ff;
+    border: 0.2rem solid #00e5ff;
+}
 
 .blinking{
-    animation:blinkingText 1.2s infinite;
+    animation:blinkingText 1s infinite;
 }
 @keyframes blinkingText{
-    0%{     color: #000;    }
-    49%{    color: #000; }
+    0%{     color:  #00ff04; }
+    49%{    color: #00ff04; }
     60%{    color: transparent; }
-    99%{    color:transparent;  }
-    100%{   color: #000;    }
+    99%{    color: transparent; }
+    100%{   color: #00ff04; }
 }
 

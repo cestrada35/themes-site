@@ -28,7 +28,7 @@
                     <hr>
                     <div>What inspired this particular theme?
                         insert scheme colors here 2
-                        <p>
+                        <p id = "inspiration">
                             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minima itaque reprehenderit hic repudiandae tenetur nemo quae maxime assumenda, quaerat, reiciendis, iure aperiam nihil necessitatibus pariatur! In sint facilis illo maxime?
                             <ul>
                                 <li>standard - windows 98</li>
@@ -57,6 +57,7 @@
             const sunset = document.getElementById('sunset');
             const cyber = document.getElementById('cyber');
             
+            const para = document.getElementById("inspiration");
 
             //Arrays containing multiple elements to change all at once
             const divFonts = document.getElementsByTagName("div");
@@ -84,7 +85,7 @@
                         Array.from(cardBGs).forEach(v => v.style.backgroundColor = "yellow");
                         Array.from(divFonts).forEach(v => v.style.color = "black");
                         Array.from(divFonts).forEach(v => v.style.borderColor = "#6d00ff");
-                        Array.from(lines).forEach(v => v.style.color = "yellow");
+                        Array.from(lines).forEach(v => v.style.color = "blue");
                         break;
                     case 'cyber':
                         document.body.style.backgroundColor = "yellow";
@@ -110,6 +111,19 @@
                 }
             }
 
+            function changeInspiration(theme){
+                switch (theme){
+                    case "":
+                        break;
+                    case "":
+                        break;
+                    case "cyber":
+                    para.textContent = "the goods";
+                        break;
+                    default: 
+                        break;
+                }
+            }
             standard.addEventListener('click', function(){
                 changeColor('standard');
             });
@@ -121,6 +135,9 @@
             });
             cyber.addEventListener('click', function(){
                 changeColor('cyber');
+            });
+            cyber.addEventListener('click', function(){
+                changeInspiration('cyber');
             });
 
             // ADD VIDEO CHANGES
