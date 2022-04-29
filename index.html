@@ -12,13 +12,13 @@
             <div class = "wrapper">
                 <div class = "cards" id = "buttons-card">
                     Select theme below:
-                    <div id = "standard"><button>lolzs</button></div>
+                    <div><button id = "standard">Standard</button></div>
                     <hr>
-                    <div><button>Terminal</button></div>
+                    <div><button id = "terminal">Terminal</button></div>
                     <hr>
-                    <div><button>lolzs</button></div>
+                    <div><button id = "sunset">Sunset</button></div>
                     <hr>
-                    <div><button>lolzs</button></div>
+                    <div><button id = "cyber">Cyber</button></div>
                 </div>
                 <div class = "cards">
                     Insert vid here
@@ -26,5 +26,43 @@
             </div>
 
         </div>
+        <script>
+
+            const standard = document.getElementById('standard');
+            const terminal = document.getElementById('terminal');
+            const sunset = document.getElementById('sunset');
+            const cyber = document.getElementById('cyber');
+
+            function changeColor(color){
+                switch (color){
+                    case 'terminal':
+                        document.body.style.backgroundColor = "black";
+                        break;
+                    case 'sunset':
+                        document.body.style.backgroundColor = "pink";
+                        break;
+                    case 'cyber':
+                        document.body.style.backgroundColor = "purple";
+                        break;
+                    default:
+                        document.body.style.backgroundColor = "white";
+                        break;
+                }
+            }
+
+            standard.addEventListener('click', function(){
+                changeColor('standard');
+            });
+            terminal.addEventListener('click', function(){
+                changeColor('terminal');
+            });
+            sunset.addEventListener('click', function(){
+                changeColor('sunset');
+            });
+            cyber.addEventListener('click', function(){
+                changeColor('cyber');
+            });
+
+        </script>
     </body>
 </html>

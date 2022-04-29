@@ -1,3 +1,8 @@
+
+/* DEFAULT LOAD UP THEME IS 'STANDARD' */
+
+
+/* DEFAULTS AND BACKGROUND */
 html {
     color: rgb(255, 255, 255);
     font-family: monospace;
@@ -14,6 +19,7 @@ html {
     border-radius: 1rem  4rem;
 }
 
+/* TITLE */
 h1 {
     text-align: center;
     margin-top: 3%;
