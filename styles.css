@@ -4,47 +4,56 @@
 
 /* DEFAULTS AND BACKGROUND */
 html {
-    color: rgb(255, 255, 255);
     font-family: monospace;
     font-size: 100%;
 }
-
-.foreground {
-    background:rgba(0, 68, 255, 0.85);
+#foreground {
+    background:rgba(0, 68, 255);
     position:absolute;
     top:4%;
     right:2%;
     bottom: 4%;
     left:2%;
+    border: 0.33rem solid rgb(0, 0, 0);
     border-radius: 1rem  4rem;
+}
+p, ul {
+    font-size: 1rem;
 }
 
 /* TITLE */
-h1 {
+#title {
     text-align: center;
-    margin-top: 3%;
-    font-size: 4rem;
+    margin:1% 20% 2% 20%;
+    font-size: 3rem;
     font-weight: lighter;
+    border: 0.32rem solid rgb(0, 0, 0);
+    border-radius: 1rem;
+    padding: 1.5rem;
+    background:rgb(255, 255, 255);
 }
 
 .wrapper {
     display: flex;
 }
 
+/* CARDS */
 .cards {
     flex:1 1;
     color: rgb(0, 0, 0);
     background:rgb(255, 255, 255);
-    border: 0.5rem solid rgb(0, 0, 0);
-    padding: 1.5rem;
-    margin: 3rem;
+    border: 0.32rem solid rgb(0, 0, 0);
     border-radius: 1rem;
+    padding: 1.5rem;
+    margin: 3rem 6rem 4rem 6rem;
     font-size: 2rem;
+    /* overflow: hidden; */
+    max-height: 10%;
+
 }
 
 .cards > div > button {
     font-size: 1.5rem;
-    
 }
 #buttons-card {
     color: rgb(0, 0, 0);
@@ -53,3 +62,21 @@ h1 {
 #standard {
     margin-top: 5rem;
 }
+
+button {
+    padding: 0.75rem;
+}
+
+
+
+.blinking{
+    animation:blinkingText 1.2s infinite;
+}
+@keyframes blinkingText{
+    0%{     color: #000;    }
+    49%{    color: #000; }
+    60%{    color: transparent; }
+    99%{    color:transparent;  }
+    100%{   color: #000;    }
+}
+
