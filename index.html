@@ -13,10 +13,10 @@ INSERT CORRECT VIDS                         -->
         <!-- the content goes here -->
         <div id = "foreground"> 
 
-            <h1 id = "title">CSS Themes</h1>
+            <h1 id = "title">Vanilla Themes</h1>
             <div class = "wrapper">
                 <div class = "cards" id = "buttons-card">
-                    Select theme below:
+                    <h2>Select theme below:</h2>
                     <div><button id = "standard">Standard</button></div>
                     <hr>
                     <div><button id = "terminal">Terminal<span class="blinking">_</span></button></div>
@@ -25,131 +25,35 @@ INSERT CORRECT VIDS                         -->
                     <hr>
                     <div><button id = "cyber">&lt;Cyber&gt;</Cyber></button></div>
                 </div>
-                <div class = "cards">
-                    Insert vid here
-                    <iframe id="player" type="text/html"
-                        src="http://www.youtube.com/embed/M7lc1UVf-VE?enablejsapi=1&origin=http://example.com"
-                        frameborder="1"></iframe>
-                        <!-- https://www.youtube.com/watch?v=1mGsb8ykrFg&ab_channel=ComputerClan -->
-                        <!-- https://www.youtube.com/watch?v=GhX9ltmVyfw&ab_channel=Sarrivin -->
+                <div class = "cards" id = "info-card">
+                    <h2>What inspired this particular theme?</h2>
+                    <iframe width="560" height="315" id="theVideo" src="https://www.youtube.com/embed/1mGsb8ykrFg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <p id = "inspiration">
+                        This simple theme was inspired in part by the color schemes of the windows 98 browser.
+                        This theme would have made itself right at home at the time, unfortunately I wasn't practicing web developement yet.
+                    </p>
                     <hr>
-                    <div>What inspired this particular theme?
-                        insert scheme colors here 2
-                        <p id = "inspiration">
-                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minima itaque reprehenderit hic repudiandae tenetur nemo quae maxime assumenda, quaerat, reiciendis, iure aperiam nihil necessitatibus pariatur! In sint facilis illo maxime?
-                            <ul>
-                                <li>standard - windows 98</li>
-                                <li>terminal - the awesomness of arch linux</li>
-                                <li>sunset - relaxing lofi videos with beach backgorunds</li>
-                                <li>cyber - most immersive game for me due to asthetic</li>
-                            </ul>
-                        </p>
-                    </div>
-                    <hr>
-                    <div>Technologies and links!
-                        <p>
-                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minima itaque reprehenderit hic repudiandae tenetur nemo quae maxime assumenda, quaerat, reiciendis, iure aperiam nihil necessitatibus pariatur! In sint facilis illo maxime?
-                            sticking with vanilla tech because we can't build a castle without strong foundations!
-                        </p>
-                    </div>
+                        <h2>Tech used for this project:</h2>
+                        <ul>
+                            <li>
+                                HTML
+                            </li>
+                            <li>
+                                CSS
+                            </li>
+                            <li>
+                                JavaScript
+                            </li>
+                            <li>
+                                DOM/Fetch/iFrame APIs
+                            </li>
+                        </ul>
+                        <p>I purposely chose to stick with vanilla JavaScript for this project, along with HTML and CSS, to ensure I have a strong foundation of the basics. 
+                        We can't have a sturdy castle without strong foundations afterall!</p>
                 </div>
             </div>
 
         </div>
-        <script>
-            const fg = document.getElementById("foreground");
-            const title = document.getElementById("title");
-            const standard = document.getElementById('standard');
-            const terminal = document.getElementById('terminal');
-            const sunset = document.getElementById('sunset');
-            const cyber = document.getElementById('cyber');
-            
-            const para = document.getElementById("inspiration");
-
-            //Arrays containing multiple elements to change all at once
-            const divFonts = document.getElementsByTagName("div");
-            const lines = document.getElementsByTagName("hr");
-            const cardBGs = document.getElementsByClassName("cards");
-            
-
-            function changeColor(color){
-                switch (color){
-                    case 'terminal':
-                        document.body.style.backgroundColor = "black";
-                        fg.style.backgroundColor = "#34495e";
-                        title.style.backgroundColor = "black";
-                        title.style.borderColor = "white";
-                        Array.from(cardBGs).forEach(v => v.style.backgroundColor = "black");
-                        Array.from(divFonts).forEach(v => v.style.color = "lime");
-                        Array.from(divFonts).forEach(v => v.style.borderColor = "white");
-                        Array.from(lines).forEach(v => v.style.color = "lime");
-                        break;
-                    case 'sunset':
-                        document.body.style.backgroundColor = "purple";
-                        fg.style.backgroundColor = "#DE3163";
-                        title.style.backgroundColor = "yellow";
-                        title.style.borderColor = "#6d00ff";
-                        Array.from(cardBGs).forEach(v => v.style.backgroundColor = "yellow");
-                        Array.from(divFonts).forEach(v => v.style.color = "black");
-                        Array.from(divFonts).forEach(v => v.style.borderColor = "#6d00ff");
-                        Array.from(lines).forEach(v => v.style.color = "blue");
-                        break;
-                    case 'cyber':
-                        document.body.style.backgroundColor = "yellow";
-                        fg.style.backgroundColor = "black";
-                        title.style.backgroundColor = "#037582";
-                        title.style.borderColor = "#00e5ff";
-                        Array.from(cardBGs).forEach(v => v.style.backgroundColor = "#037582");
-                        Array.from(divFonts).forEach(v => v.style.color = "#00e5ff");
-                        Array.from(divFonts).forEach(v => v.style.borderColor = "#00e5ff");
-                        Array.from(lines).forEach(v => v.style.color = "#00e5ff");
-                        break;
-                    default:
-                        document.body.style.backgroundColor = "white";
-                        fg.style.backgroundColor = "#0044ff";
-                        title.style.backgroundColor = "white";
-                        title.style.borderColor = "black";
-                        Array.from(cardBGs).forEach(v => v.style.backgroundColor = "white");
-                        Array.from(divFonts).forEach(v => v.style.color = "black");
-                        Array.from(divFonts).forEach(v => v.style.borderColor = "black");
-                        Array.from(lines).forEach(v => v.style.color = "black");
-                        break;
-                        break;
-                }
-            }
-
-            function changeInspiration(theme){
-                switch (theme){
-                    case "":
-                        break;
-                    case "":
-                        break;
-                    case "cyber":
-                    para.textContent = "the goods";
-                        break;
-                    default: 
-                        break;
-                }
-            }
-            
-            standard.addEventListener('click', function(){
-                changeColor('standard');
-            });
-            terminal.addEventListener('click', function(){
-                changeColor('terminal');
-            });
-            sunset.addEventListener('click', function(){
-                changeColor('sunset');
-            });
-            cyber.addEventListener('click', function(){
-                changeColor('cyber');
-            });
-
-
-            cyber.addEventListener('click', function(){
-                changeInspiration('cyber');
-            });
-
-        </script>
+        <script src="script.js"></script>
     </body>
 </html>
