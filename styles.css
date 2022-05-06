@@ -88,6 +88,7 @@ button {
     background-color: #000000;
     color: #00e5ff;
     border: 0.2rem solid #00e5ff;
+    text-shadow: 4px 4px 1px #ff0000;
 }
 
 .blinking{

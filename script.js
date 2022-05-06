@@ -19,42 +19,50 @@
                 switch (color){
                     case 'terminal':
                         document.body.style.backgroundColor = "black";
+                        fg.style.backgroundImage = "";
                         fg.style.backgroundColor = "#313d66";
                         title.style.backgroundColor = "black";
                         title.style.borderColor = "white";
                         Array.from(cardBGs).forEach(v => v.style.backgroundColor = "black");
                         Array.from(divFonts).forEach(v => v.style.color = "lime");
                         Array.from(divFonts).forEach(v => v.style.borderColor = "white");
+                        Array.from(divFonts).forEach(v => v.style.textShadow = "");
                         Array.from(lines).forEach(v => v.style.color = "lime");
                         break;
                     case 'sunset':
                         document.body.style.backgroundColor = "purple";
-                        fg.style.backgroundColor = "#DE3163";
+                        fg.style.backgroundImage = "linear-gradient(#ff8a00, #e52e71)";
                         title.style.backgroundColor = "yellow";
                         title.style.borderColor = "#6d00ff";
                         Array.from(cardBGs).forEach(v => v.style.backgroundColor = "yellow");
                         Array.from(divFonts).forEach(v => v.style.color = "black");
                         Array.from(divFonts).forEach(v => v.style.borderColor = "#6d00ff");
+                        Array.from(divFonts).forEach(v => v.style.textShadow = "");
                         Array.from(lines).forEach(v => v.style.color = "blue");
                         break;
                     case 'cyber':
-                        document.body.style.backgroundColor = "yellow";
+                        document.body.style.backgroundColor = "black";
                         fg.style.backgroundColor = "black";
+                        fg.style.backgroundImage = "url('/images/cyberbg.jpg')";
+                        fg.style.backgroundSize = "contain";
                         title.style.backgroundColor = "#037582";
                         title.style.borderColor = "#00e5ff";
                         Array.from(cardBGs).forEach(v => v.style.backgroundColor = "#037582");
                         Array.from(divFonts).forEach(v => v.style.color = "#00e5ff");
                         Array.from(divFonts).forEach(v => v.style.borderColor = "#00e5ff");
+                        Array.from(divFonts).forEach(v => v.style.textShadow = "4px 4px 1px #ff0000");
                         Array.from(lines).forEach(v => v.style.color = "#00e5ff");
                         break;
                     default:
                         document.body.style.backgroundColor = "white";
+                        fg.style.backgroundImage = "";
                         fg.style.backgroundColor = "#0044ff";
                         title.style.backgroundColor = "white";
                         title.style.borderColor = "black";
                         Array.from(cardBGs).forEach(v => v.style.backgroundColor = "white");
                         Array.from(divFonts).forEach(v => v.style.color = "black");
                         Array.from(divFonts).forEach(v => v.style.borderColor = "black");
+                        Array.from(divFonts).forEach(v => v.style.textShadow = "");
                         Array.from(lines).forEach(v => v.style.color = "black");
                         break;
                         break;
@@ -71,8 +79,8 @@
                         break;
                     case "sunset":
                         para.textContent = 
-                        "This theme is simply inspired by a category of music that really helps me focus (especially when coding) called lo-fi."+ 
-                        " Yes, you can rest assured that I defiitely listened to lo-fi while making this little project."+
+                        "This theme was inspired by a category of music that I find really helps me focus (especially when coding) called lo-fi."+ 
+                        " Yes, you can rest assured that I definitely listened to this while making this little project."+
                         " I can especially get into the zone when there is an actual sunset outside of my window.";
                         break;
                     case "cyber":
